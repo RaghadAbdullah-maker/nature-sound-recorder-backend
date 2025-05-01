@@ -7,15 +7,15 @@ class Category(models.Model):
     created_at=models.DateTimeField(auto_now_add=True)
     
     
-    
     def __str__(self):
         return self.name
+
 
 class Recording(models.Model):
     
     title = models.CharField(max_length=255)
     description = models.CharField(max_length=1000)
-    audio_file=models.FileField(upload_to='recordings/')
+    audio_file=models.FileField(upload_to='sounds/')
     created_at=models.DateTimeField(auto_now_add=True)
     
     user = models.ForeignKey(User, on_delete=models.CASCADE)
