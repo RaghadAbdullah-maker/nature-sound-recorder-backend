@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import RecordingCreateView , RecordingDetaitView ,CategoryCreateView,CategoryDetaitView,FavoriteDetaitView,FavoriteCreateView
+from .views import RecordingCreateView , RecordingDetaitView ,CategoryCreateView,CategoryDetaitView,FavoriteDetaitView,FavoriteCreateView,SignUpView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -13,6 +13,6 @@ urlpatterns = [
     path('categories/<int:pk>/', CategoryDetaitView.as_view(), name='categories-detail'),
     path('favorites/', FavoriteCreateView.as_view(), name='favorites-create'),
     path('favorites/<int:pk>/', FavoriteDetaitView.as_view(), name='favorites-detail'),
-
+    path('signup/', SignUpView.as_view(), name='signup')
 
 ]

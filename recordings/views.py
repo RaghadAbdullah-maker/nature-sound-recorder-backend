@@ -12,6 +12,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from django.contrib.auth.models import User
 
 from django.shortcuts import get_object_or_404
+from rest_framework.parsers import MultiPartParser, FormParser
 
 
 # Create your views here.
@@ -19,7 +20,7 @@ from django.shortcuts import get_object_or_404
 
 class RecordingCreateView(APIView):
     
-    
+      parser_classes = [MultiPartParser, FormParser]
       def get_permissions(self):
           if self.request.method == 'Get':
               return [AllowAny()]
@@ -56,11 +57,15 @@ class RecordingDetaitView(APIView):
     
     def delete(self, request, pk):
         recording = self.get_object(pk)
+        if recording.user != request.user:
+             return Response({'detail': 'You are not allowed to delete this recording'}, status=403)
         recording.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
     
     def patch(self, request, pk): 
         recording = self.get_object(pk)
+        if recording.user != request.user:
+             return Response({'detail': 'You are not allowed to delete this recording'}, status=403)
         serializer = RecordingSerializer(recording, data=request.data ,partial=True)
         if serializer.is_valid():
             serializer.save()
@@ -157,4 +162,40 @@ class FavoriteDetaitView(APIView):
         favorite = get_object_or_404(Favorite,pk=pk , user=request.user )
         favorite.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+
+
+
+class SignUpView(APIView):
+    permission_classes = [AllowAny]
     
+    def post(self, request):
+        print("Incoming data:", request.data)
+        username = request.data.get('username')
+        email = request.data.get('email')
+        password = request.data.get('password')
+        
+        if not username or not email or not password:
+             return Response({'error': 'All fields are required.'}, status=400)
+
+        try:
+            validate_password(password)
+        except ValidationError as err:
+            return Response({'error': err.messages}, status=400)
+
+        user = User.objects.create_user(
+            username=username,
+            email=email,
+            password=password
+        )
+
+        tokens = RefreshToken.for_user(user)
+       
+        return Response(
+            {
+                'refresh': str(tokens),
+                'access': str(tokens.access_token),
+                'user_id': user.id 
+            },
+            status=201
+        )
