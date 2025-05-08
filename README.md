@@ -1,5 +1,3 @@
-
-
 # Nature Sound Recorder - Backend
 
 This is the **backend** repository for the Nature Sound Recorder project. The application serves as the backend to manage user accounts, audio recordings, categories, and interactions between users.
