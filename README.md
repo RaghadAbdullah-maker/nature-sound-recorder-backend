@@ -18,7 +18,7 @@ is a web application that allows users to record natural sounds such as rain, bi
 
 ## Repository Link
 
-**Frontend Repository:** [Nature Sound Recorder - Frontend](https://github.com/your-username/nature-sound-recorder-frontend)
+**Frontend Repository:** [Nature Sound Recorder - Frontend](https://git.generalassemb.ly/raghadabdullah-maker/nature-sound-recorder-frontend.git)
 
 ---
 
