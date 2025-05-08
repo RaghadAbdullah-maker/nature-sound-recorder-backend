@@ -128,7 +128,7 @@ python manage.py runserver
 
 ## Developed By
 
-**ٌRaghad Alhazmi**
+**Raghad Alhazmi**
 
 ---
 
