@@ -46,7 +46,7 @@ cd nature-sound-recorder-backend
 ### 2. Set Up the Virtual Environment
 
 python3 -m venv venv
-source venv/bin/activate  # On Windows, use venv\Scripts\activate
+
 
 ### 3. Install Dependencies
 
@@ -125,23 +125,3 @@ python manage.py runserver
 
 ---
 
-
-Technologies: Python, Django, DRF, PostgreSQL
-
-Running Steps:
-
-pipenv install django
-pipenv shell
-
-
-django-admin startproject  .
-python manage.py startapp 
-
-pipenv install psycopg2-binary
-
-python manage.py makemigrations
-python manage.py migrate
-
- pipenv install django-cors-headers
-
-python manage.py runserver
