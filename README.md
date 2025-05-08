@@ -61,31 +61,39 @@ python manage.py migrate
 ### 6. Run the Development Server
 
 python manage.py runserver
-
 ## API Documentation
 
 ### Authentication
 
-* **POST** `/api/auth/signup/` — Register a new user.
-* **POST** `/api/auth/login/` — Log in to an existing account, returns JWT token.
+| Method | Endpoint                | Description                          |
+|--------|-------------------------|--------------------------------------|
+| POST   | `/api/auth/signup/`     | Register a new user                  |
+| POST   | `/api/auth/login/`      | Log in to an existing account, returns JWT token |
 
 ### Recordings
 
-* **GET** `/api/recordings/` — Get a list of all recordings.
-* **POST** `/api/recordings/` — Upload a new recording (requires JWT authentication).
-* **GET** `/api/recordings/{id}/` — Get details of a specific recording.
-* **PATCH** `/api/recordings/{id}/` — Edit a specific recording.
-* **DELETE** `/api/recordings/{id}/` — Delete a specific recording.
+| Method | Endpoint                      | Description                          |
+|--------|-------------------------------|--------------------------------------|
+| GET    | `/api/recordings/`            | Get a list of all recordings         |
+| POST   | `/api/recordings/`            | Upload a new recording (JWT required)|
+| GET    | `/api/recordings/{id}/`       | Get details of a specific recording  |
+| PATCH  | `/api/recordings/{id}/`       | Edit a specific recording            |
+| DELETE | `/api/recordings/{id}/`       | Delete a specific recording          |
 
 ### Categories
 
-* **GET** `/api/categories/` — Get a list of all categories.
-* **POST** `/api/categories/` — Create a new category (admin only).
+| Method | Endpoint                | Description                          |
+|--------|-------------------------|--------------------------------------|
+| GET    | `/api/categories/`      | Get a list of all categories         |
+| POST   | `/api/categories/`      | Create a new category (admin only)   |
 
 ### Favorites
 
-* **POST** `/api/favorites/` — Add a recording to favorites.
-* **DELETE** `/api/favorites/{id}/` — Remove a recording from favorites.
+| Method | Endpoint                      | Description                          |
+|--------|-------------------------------|--------------------------------------|
+| POST   | `/api/favorites/`             | Add a recording to favorites         |
+| DELETE | `/api/favorites/{id}/`        | Remove a recording from favorites    |
+
 
 ---
 
@@ -97,21 +105,15 @@ python manage.py runserver
 
 ---
 
-## Screenshots
-![](jj.png)
-![](mbj.png)
-![](jbhbhj.png)
-* API responses
-* Example of JWT token usage
-* Admin interface (if applicable)
-
----
-
 ## IceBox Features
 
-* User roles and permissions (Admin, User)
-* Rate recording system (like / dislike)
-* Audio file processing (file size, format validation)
+ 1. User Profiles: Personalized user profiles. 
+ 2. Search: Search recordings by tags, titles, or descriptions. 
+ 3. Improved Favorites: Organize and manage favorite recordings. 
+ 4. Comments and Ratings: Allow users to comment and rate recordings. 
+ 5. Audio Preview: Preview recordings before saving or viewing details. 
+ 6. Map Feature: Show where each sound was recorded. 
+ 7. Likes: Enable liking recordings. 
 
 ---
 
@@ -120,6 +122,7 @@ python manage.py runserver
 1. Set up the backend server (see installation instructions above)
 2. Connect the frontend to the backend API.
 3. Use the API to manage recordings, categories, and user interactions.
+
 
 ---
 
