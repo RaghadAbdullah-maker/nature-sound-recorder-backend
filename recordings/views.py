@@ -65,7 +65,7 @@ class RecordingDetaitView(APIView):
     def patch(self, request, pk): 
         recording = self.get_object(pk)
         if recording.user != request.user:
-             return Response({'detail': 'You are not allowed to delete this recording'}, status=403)
+            return Response({'detail': 'You are not allowed to edit this recording.'}, status=status.HTTP_403_FORBIDDEN)
         serializer = RecordingSerializer(recording, data=request.data ,partial=True)
         if serializer.is_valid():
             serializer.save()
