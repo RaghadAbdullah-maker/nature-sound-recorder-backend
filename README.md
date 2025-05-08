@@ -89,8 +89,15 @@ python manage.py runserver
 
 ---
 
-## Screenshots
+## ERD
+![ERD](ERD.png)
 
+## wireframe
+![wirframe](wireframe.png)
+
+---
+
+## Screenshots
 ![](jj.png)
 ![](mbj.png)
 ![](jbhbhj.png)
