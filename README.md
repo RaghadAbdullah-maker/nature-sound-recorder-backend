@@ -91,10 +91,9 @@ python manage.py runserver
 
 ## Screenshots
 
-(<Screenshot 2025-05-01 062830.png>)
-(<Screenshot 2025-05-01 062606.png>)
-(<Screenshot 2025-05-01 071045.png>)
-(<Screenshot 2025-05-01 070732.png>)
+![](jj.png)
+![](mbj.png)
+![](jbhbhj.png)
 * API responses
 * Example of JWT token usage
 * Admin interface (if applicable)
