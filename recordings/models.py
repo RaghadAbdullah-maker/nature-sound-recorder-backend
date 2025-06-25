@@ -44,3 +44,10 @@ class Favorite(models.Model):
         
     def __str__(self):
         return f"{self.user.username} ❤️ {self.recording.title}"
+
+
+
+class Destination(models.Model):
+    title = models.CharField(max_length=255)
+    subtitle = models.TextField(blank=True)
+    image = models.ImageField(upload_to='destinations/')

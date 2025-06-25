@@ -1,6 +1,6 @@
 
 from rest_framework import serializers
-from .models import Recording, Category, Favorite
+from .models import Recording, Category, Favorite ,Destination
 
 
 
@@ -28,6 +28,10 @@ class FavoriteSerializer(serializers.ModelSerializer):
 
 
 
+class DestinationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Destination
+        fields = '__all__'
 
 
 

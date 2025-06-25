@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect
-from .models import Recording ,Category ,Favorite
-from .serializers import RecordingSerializer,FavoriteSerializer,CategorySerializer
+from .models import Recording ,Category ,Favorite,Destination
+from .serializers import RecordingSerializer,FavoriteSerializer,CategorySerializer ,DestinationSerializer
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -13,6 +13,7 @@ from django.contrib.auth.models import User
 
 from django.shortcuts import get_object_or_404
 from rest_framework.parsers import MultiPartParser, FormParser
+from rest_framework import generics
 
 
 # Create your views here.
@@ -199,3 +200,8 @@ class SignUpView(APIView):
             },
             status=201
         )
+
+class DestinationListView(generics.ListAPIView):
+    queryset = Destination.objects.all()
+    serializer_class = DestinationSerializer
+    permission_classes = [IsAuthenticated]
