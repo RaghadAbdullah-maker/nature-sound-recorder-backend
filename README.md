@@ -1,5 +1,11 @@
 # Nature Sound Recorder - Backend
 
+
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![Django](https://img.shields.io/badge/Django-REST-green)
+![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL-blue)
+
+
 This is the **backend** repository for the Nature Sound Recorder project. The application serves as the backend to manage user accounts, audio recordings, categories, and interactions between users.
 
 ---
@@ -8,17 +14,17 @@ This is the **backend** repository for the Nature Sound Recorder project. The ap
 
 is a web application that allows users to record natural sounds such as rain, birds, and ocean waves, categorize them, and view recordings made by others.
 
-* Sign up and log in using JWT authentication
-* Upload, edit, and delete audio recordings
+* Sign up and log in using **JWT authentication**
+* Upload, edit, and delete **audio recordings**
 * View a list of all recordings
-* Filter recordings by category
-* Mark and view favorite recordings
+* Filter recordings by **category**
+* Mark and view **favorite recordings**
 
 ---
 
 ## Repository Link
 
-**Frontend Repository:** [Nature Sound Recorder - Frontend](https://git.generalassemb.ly/raghadabdullah-maker/nature-sound-recorder-frontend.git)
+**Frontend Repository:** [Nature Sound Recorder - Frontend](https://github.com/RaghadAbdullah-maker/nature-sound-recorder-frontend.git)
 
 ---
 
@@ -48,7 +54,7 @@ python3 -m venv venv
 
 ### 3. Install Dependencies
 
-pip install -r requirements.txt
+pipenv install
 
 ### 4. Set Up Environment Variables
 
@@ -61,6 +67,7 @@ python manage.py migrate
 ### 6. Run the Development Server
 
 python manage.py runserver
+
 ## API Documentation
 
 ### Authentication
