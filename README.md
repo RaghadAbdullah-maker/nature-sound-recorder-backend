@@ -44,6 +44,7 @@ is a web application that allows users to record natural sounds such as rain, bi
 
 ### 1. Clone the Repository
 
+```bash
 git clone https://github.com/your-username/nature-sound-recorder-backend.git
 cd nature-sound-recorder-backend
 
