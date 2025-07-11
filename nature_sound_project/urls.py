@@ -24,7 +24,7 @@ from rest_framework_simplejwt.views import (
     TokenRefreshView,
 )
 def redirect_to_frontend(request):
-    return redirect("https://your-frontend-url.onrender.com") 
+    return redirect("nature-sound-recorder-frontend.vercel.app") 
 
 urlpatterns = [
 path('', redirect_to_frontend),
