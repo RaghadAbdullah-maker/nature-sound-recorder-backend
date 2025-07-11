@@ -16,15 +16,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.shortcuts import redirect
 from django.conf import settings
 from django.conf.urls.static import static
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
+def redirect_to_frontend(request):
+    return redirect("https://your-frontend-url.onrender.com") 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
+path('', redirect_to_frontend),
+path('admin/', admin.site.urls),
  path('api/', include('recordings.urls')),
  ]
 
