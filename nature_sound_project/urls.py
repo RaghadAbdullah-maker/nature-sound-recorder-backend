@@ -23,11 +23,11 @@ from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
 )
-def redirect_to_frontend(request):
-    return redirect("nature-sound-recorder-frontend.vercel.app") 
+# def redirect_to_frontend(request):
+#     return redirect("nature-sound-recorder-frontend.vercel.app") 
 
 urlpatterns = [
-path('', redirect_to_frontend),
+# path('', redirect_to_frontend),
 path('admin/', admin.site.urls),
  path('api/', include('recordings.urls')),
  ]
