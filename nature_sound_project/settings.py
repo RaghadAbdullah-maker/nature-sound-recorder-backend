@@ -38,9 +38,9 @@ if not SECRET_KEY:
     raise Exception("❌ SECRET_KEY is missing!")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['my-nature-sound-app.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -155,3 +155,5 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
