@@ -12,13 +12,7 @@ load_dotenv(BASE_DIR / ".env")
 SECRET_KEY = os.getenv("SECRET_KEY", "dev-secret-key-change-me")
 DEBUG = False
 
-ALLOWED_HOSTS = [
-    "127.0.0.1",
-    "localhost",
-    "sound-recorder-backend.onrender.com",
-    "nature-sound-backend.onrender.com",
-]
-
+ALLOWED_HOSTS = ["*"]
 # التطبيقات
 INSTALLED_APPS = [
     # Django core
