@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import RecordingCreateView , RecordingDetaitView ,CategoryCreateView,CategoryDetaitView,FavoriteDetaitView,FavoriteCreateView,SignUpView,DestinationListView
+from .views import RecordingCreateView , RecordingDetaitView ,CategoryCreateView,CategoryDetaitView,FavoriteDetaitView,FavoriteCreateView,SignUpView,DestinationListView,create_admin
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
