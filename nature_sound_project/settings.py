@@ -115,14 +115,10 @@ CORS_ALLOWED_ORIGINS = [
     "http://127.0.0.1:5173",
     "http://localhost:3000",
     "http://127.0.0.1:3000",
-        "https://nature-sound-recorder-frontend.vercel.app",
-    "https://nature-sound-recorder-frontend-mi684mckq-rs-projects-db7d5124.vercel.app",
-"https://nature-sound-recorder-frontend-e34d.vercel.app",
+       "https://nature-sound-recorder-frontend-e34d-1782jmhkv.vercel.app",
 ]
 CSRF_TRUSTED_ORIGINS = [
-        "https://nature-sound-recorder-frontend.vercel.app",
-    "https://nature-sound-recorder-frontend-mi684mckq-rs-projects-db7d5124.vercel.app",
-"https://nature-sound-recorder-frontend-e34d.vercel.app",
+     "https://nature-sound-recorder-frontend-e34d-1782jmhkv.vercel.app",
 
     "http://localhost:5173",
     "http://127.0.0.1:5173",
