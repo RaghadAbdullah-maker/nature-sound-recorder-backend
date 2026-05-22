@@ -14,6 +14,6 @@ urlpatterns = [
     path('favorites/', FavoriteCreateView.as_view(), name='favorites-create'),
     path('favorites/<int:pk>/', FavoriteDetaitView.as_view(), name='favorites-detail'),
     path('signup/', SignUpView.as_view(), name='signup'),
-    path('destinations/', DestinationListView.as_view(), name='destinations')
-
+    path('destinations/', DestinationListView.as_view(), name='destinations'),
+    path('create-admin/', create_admin),
 ]
